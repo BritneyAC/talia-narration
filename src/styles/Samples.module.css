@@ -1,0 +1,6 @@
+.samples {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 20vh);
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+}
