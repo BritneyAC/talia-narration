@@ -4,7 +4,8 @@ import { NextPage } from "next";
 
 interface NavbarProps {
   navIsShown: boolean,
-  toggleMenu: ()=>void
+  toggleMenu: ()=>void,
+  switchPage: (newLocation: string)=>void
 }
 
 const Navbar: NextPage<NavbarProps> = (props) => {
@@ -20,10 +21,10 @@ const Navbar: NextPage<NavbarProps> = (props) => {
         </button>
 
       {props.navIsShown ? <ul className={styles.menu}>
-        <li>About Me</li>
-        <li>Samples</li>
-        <li>Reviews</li>
-        <li>Links</li>
+        <li onClick={() => {props.switchPage("/")}}>About Me</li>
+        <li onClick={() => {props.switchPage("/samples")}}>Samples</li>
+        <li onClick={() => {props.switchPage("/reviews")}}>Reviews</li>
+        <li onClick={() => {props.switchPage("/links")}}>Links</li>
       </ul> : <div className={styles.location}><h1>{loc}</h1></div>}
     </nav>
   )

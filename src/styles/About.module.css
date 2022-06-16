@@ -6,7 +6,7 @@
   padding: 1rem 5rem;
 }
 
-.about--text {
+.text {
   text-shadow: 1px 0 black, 0 1px black;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -14,7 +14,7 @@
   grid-column-end: -1;
 }
 
-.about--sample {
+.sample {
   justify-self: center;
   grid-row-start: 2;
   grid-row-end: -1;
@@ -22,7 +22,7 @@
   grid-column-end: 3;
 }
 
-.about--review {
+.review {
   text-shadow: 1px 0 black, 0 1px black;
   justify-self: center;
   grid-row-start: 2;

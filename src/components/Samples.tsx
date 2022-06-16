@@ -9,6 +9,8 @@ import ParanormalPets from "@/samples/Paranormal_Pets.mp3"
 import WitchWater from "@/samples/Witch-Water.mp3"
 import { NextPage } from "next"
 
+
+
 const Samples: NextPage = () => {
   const arrayOfSamples = [
     Daddy,
@@ -23,8 +25,8 @@ const Samples: NextPage = () => {
 
   const samplesElements = arrayOfSamples.map((sample, index) => 
     <div key={index} className={styles.sample}>
-      <audio controls>
-        <source src={sample} type="audio/mpeg" />
+      <audio preload="none" controls>
+        <source  src={sample} type="audio/mpeg" />
       </audio>
     </div>)
 

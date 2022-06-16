@@ -1,6 +1,3 @@
-nav
-  
-
 .nav{
   z-index: 9998;
   display: grid;
@@ -10,50 +7,69 @@ nav
   height: 100%;
   align-items: center;
   background: hsl(325, 100%, 26%);
-
+  
   & *{
     margin: 0;
   }
-  &--title{
-    justify-self: end;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    font-size: 2.5rem;
-    margin: 0;
-    text-shadow: 1px 0 black, 0 1px black;
+}
+
+.title{
+  justify-self: end;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 1px 0 black, 0 1px black;
+}
+
+.toggler{
+  grid-column-start: 3;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  justify-self: end;
+  z-index: 9999;
+  background-color: black;
+  background-size: contain;
+  border: none;
+  width: 2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.toggler[aria-expanded="true"]{
+  background-color: black;
+}
+
+.menu, .location{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  text-shadow: 1px 0 black, 0 1px black;
+}
+
+.menu a{ 
+  cursor: pointer;
+  color: inherit;
+}
+
+@media(max-width: 44rem){
+  .nav{
+    height: 100%;
+    width: 100%;
   }
-  &--toggler{
-    grid-column-start: 3;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    justify-self: end;
-    z-index: 9999;
-    background-color: black;
-    background-size: contain;
-    border: none;
-    width: 2rem;
-    aspect-ratio: 1;
-    cursor: pointer;
-  }
-  &--toggler[aria-expanded="true"]{
-    background-color: black;
-  }
-  &--menu, &--location{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    margin: 0;
-    text-shadow: 1px 0 black, 0 1px black;
-  }
-  &--menu a{ 
-    cursor: pointer;
-    color: inherit;
+
+  .menu{
+    flex-direction: column;
+    height: 50vh;
+    margin: auto;
+    align-items: space-between;
   }
 }

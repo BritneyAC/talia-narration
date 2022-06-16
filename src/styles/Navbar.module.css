@@ -1,4 +1,3 @@
-nav
 .nav {
   z-index: 9998;
   display: grid;
@@ -10,13 +9,11 @@ nav
   background: #85004d;
 }
 
-nav
 .nav * {
   margin: 0;
 }
 
-nav
-.nav--title {
+.title {
   justify-self: end;
   grid-column-start: 1;
   grid-column-end: 2;
@@ -27,8 +24,7 @@ nav
   text-shadow: 1px 0 black, 0 1px black;
 }
 
-nav
-.nav--toggler {
+.toggler {
   grid-column-start: 3;
   grid-column-end: -1;
   grid-row-start: 1;
@@ -43,14 +39,11 @@ nav
   cursor: pointer;
 }
 
-nav
-.nav--toggler[aria-expanded="true"] {
+.toggler[aria-expanded="true"] {
   background-color: black;
 }
 
-nav
-.nav--menu, nav
-.nav--location {
+.menu, .location {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -62,8 +55,20 @@ nav
   text-shadow: 1px 0 black, 0 1px black;
 }
 
-nav
-.nav--menu a {
+.menu a {
   cursor: pointer;
   color: inherit;
+}
+
+@media (max-width: 44rem) {
+  .nav {
+    height: 100%;
+    width: 100%;
+  }
+  .menu {
+    flex-direction: column;
+    height: 50vh;
+    margin: auto;
+    align-items: space-between;
+  }
 }
