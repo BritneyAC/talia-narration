@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.header{
+.header, .headerExpanded{
   grid-row-start: 1;
   grid-row-end: 2;
 }
@@ -19,20 +19,30 @@
   padding: 2rem;
 }
 
-
-.picOfTalia{
+.picWrapper, .picWrapperExpanded{
   position: absolute;
-  transform: translateX(4rem) translateY(1rem);
   transition: transform .5s ease-in-out;
-  height: 10vh;
-
-  &Expanded{
-    position: absolute;
-    transform: translateX(10vw) translateY(25vh);
-    transition: transform .5s ease-in-out;
-    width: clamp(10rem, 15vw, 15rem);
+  height: auto;
+  aspect-ratio: 3/4;
+  display: block;
+  & *{
+    height: 100%;
+    width: 100%;
+    
   }
 }
+
+.picWrapper{
+  transform: translateX(2vw) translateY(2vh);
+  width: 4rem;
+  
+  &Expanded{
+    transform: translateX(5vw) translateY(25vh);
+    width: clamp(12rem, 26vw, 15rem);
+  }
+}
+
+
 
 @media(max-width: 44rem){
   .headerExpanded{
@@ -42,10 +52,8 @@
     grid-column-end: -1;
     height: 100vh;
     width: 100vw;
-    @at-root .pic-of-talia{
-      position: absolute;
+    @at-root .picWrapper{
       transform: translateX(10vw) translateY(25vh);
-      transition: .5s ease-in-out;
       width: clamp(10rem, 15vw, 15rem);
       height: auto;
     }

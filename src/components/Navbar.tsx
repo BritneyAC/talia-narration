@@ -1,6 +1,8 @@
 import { useState } from "react"
 import styles from "@/styles/Navbar.module.css";
 import { NextPage } from "next";
+import { GiHamburgerMenu } from "react-icons/gi"
+import { GrClose } from "react-icons/gr"
 
 interface NavbarProps {
   navIsShown: boolean,
@@ -16,10 +18,14 @@ const Navbar: NextPage<NavbarProps> = (props) => {
   return(
     <nav className={styles.nav}>
       <h1 className={styles.title}>Talia Carver</h1>
-      <button className={styles.toggler} aria-controls="nav--menu" aria-expanded={props.navIsShown ? "true" : "false"} onClick={props.toggleMenu}>
-        <span className="sr-only">Menu</span>
-        </button>
-
+      <div className={styles.toggler} aria-controls="nav--menu" aria-expanded={props.navIsShown ? "true" : "false"} onClick={props.toggleMenu}>
+        {props.navIsShown ? <GrClose>
+          <span className="sr-only">Menu</span>
+        </GrClose> :
+        <GiHamburgerMenu>
+          <span className="sr-only">Menu</span>
+        </GiHamburgerMenu>}
+      </div>
       {props.navIsShown ? <ul className={styles.menu}>
         <li onClick={() => {props.switchPage("/")}}>About Me</li>
         <li onClick={() => {props.switchPage("/samples")}}>Samples</li>

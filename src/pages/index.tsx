@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -13,19 +13,31 @@ import talia from "@/images/talia.jpg"
 const Home: NextPage = () => {
   const [navIsShown, setNavIsShown] = useState(false)
   const [location, setLocation] = useState("/")
+  const [expanded, setExpanded] = useState(true)
   const toggleMenu = () => {
     setNavIsShown((prevShown: boolean) => !prevShown)
   }
   const switchPage = (newLocation: string) => {
     setLocation(newLocation)
   }
+
+  useEffect(()=>{
+    if(location === "/"){
+      setExpanded(true)
+    } else{
+      setExpanded(false)
+    }
+  }, [location])
+
   return (
     <div className={styles.app}>
       <Head>
         <title>Talia Narration</title>
         <meta name="description" content="Portfolio site for Talia Carver's narration work" />
       </Head>
-      <Image className={location === "/" ? styles.picOfTaliaExpanded : styles.picOfTalia} height={300} width={220} src={talia}/>
+      <div className={expanded ? styles.picWrapperExpanded : styles.picWrapper}>
+        <Image className={styles.picOfTalia} height={expanded ? 320 : 80} width={expanded ? 240 : 60} sizes={expanded ? "75vw" : "50vw"} layout="responsive" src={talia} alt="Talia"/>
+      </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
         <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage}/>
       </header>
