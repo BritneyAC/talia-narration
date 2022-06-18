@@ -1,9 +1,12 @@
 .about {
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 2.5fr 1fr;
   align-items: center;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
+  gap: 1rem;
 }
 
 .text {
@@ -23,10 +26,29 @@
 }
 
 .review {
+  height: 15vh;
   text-shadow: 1px 0 black, 0 1px black;
   justify-self: center;
   grid-row-start: 2;
   grid-row-end: -1;
   grid-column-start: 3;
   grid-column-end: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review * {
+  margin: 0;
+}
+
+.review h3 {
+  display: inline;
+}
+
+.star {
+  aspect-ratio: 1/1;
+  width: 2rem;
+  color: #fff566;
+  display: inline;
 }

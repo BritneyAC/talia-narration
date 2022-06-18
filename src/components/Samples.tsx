@@ -1,7 +1,4 @@
 import styles from "@/styles/Samples.module.css"
-import Daddy from "@/samples/Daddy.mp3"
-import Bunger from "@/samples/bunger.mp3"
-import Normies from "@/samples/normies.mp3"
 import GhostStories from "@/samples/50_Ghost_Stories.mp3"
 import AsFarAsTheISees from "@/samples/As_Far_As_the_I_Sees.mp3"
 import Origins from "@/samples/Origins.mp3"
@@ -13,21 +10,19 @@ import { NextPage } from "next"
 
 const Samples: NextPage = () => {
   const arrayOfSamples = [
-    Daddy,
-    Bunger,
-    Normies,
-    GhostStories,
-    AsFarAsTheISees,
-    Origins,
-    ParanormalPets,
-    WitchWater
+    {src: GhostStories, description: '"50 Ghost Stories"'},
+    {src: AsFarAsTheISees, description: '"As Far As The I Sees"'},
+    {src: Origins, description: '"Origins"'},
+    {src: ParanormalPets, description: '"Paranormal Pets"'},
+    {src: WitchWater, description:' "Witch Water"'}
   ]
 
   const samplesElements = arrayOfSamples.map((sample, index) => 
     <div key={index} className={styles.sample}>
-      <audio preload="none" controls>
-        <source  src={sample} type="audio/mpeg" />
+      <audio className={styles.audio} preload="none" controls>
+        <source  src={sample.src} type="audio/mpeg" />
       </audio>
+      <h1>{sample.description}</h1>
     </div>)
 
   return(

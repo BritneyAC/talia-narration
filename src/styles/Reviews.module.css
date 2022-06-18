@@ -1,9 +1,10 @@
 .reviews {
-  padding: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20vw);
+  grid-template-columns: repeat(auto-fill, calc(22vw - 2rem));
   grid-template-rows: 1fr 1fr;
-  height: 90%;
+  height: 100%;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
 .review {
@@ -11,10 +12,10 @@
   grid-template-rows: 1fr 4fr 1fr;
   grid-template-columns: 1fr 1fr;
   height: 100%;
+  width: 100%;
   background-color: #3d3d3d;
   box-shadow: 0 0 0.15rem 0 black;
   border-radius: 5px;
-  margin: 0 1rem;
   padding: 0 1rem;
 }
 
@@ -40,7 +41,7 @@
   overflow: auto;
 }
 
-.review h2, .review--star {
+.review h2, .review .star {
   grid-row-start: 3;
   grid-row-end: -1;
   grid-column-start: 1;
@@ -52,7 +53,7 @@
   padding-left: 2rem;
 }
 
-.review--star {
+.review .star {
   aspect-ratio: 1/1;
   width: 2rem;
   color: #fff566;

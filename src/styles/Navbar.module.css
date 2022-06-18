@@ -38,7 +38,8 @@
   cursor: pointer;
 }
 
-.toggler > * {
+.toggler * {
+  stroke: white;
   width: 100%;
   height: 100%;
 }
@@ -55,7 +56,7 @@
   text-shadow: 1px 0 black, 0 1px black;
 }
 
-.menu a {
+.menu li {
   cursor: pointer;
   color: inherit;
 }
