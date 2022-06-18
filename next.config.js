@@ -4,7 +4,7 @@ const nextConfig = {
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({
-      test: /\.mp3$/,
+      test: /\.(mp3|ogg)$/,
       exclude: config.exclude,
       use: [{
         loader: require.resolve("url-loader"),

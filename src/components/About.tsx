@@ -2,7 +2,7 @@ import { NextPage } from "next"
 import { FaStar } from "react-icons/fa"
 import styles from "@/styles/About.module.css"
 import Reviews from "@/ReviewList"
-import sample from "@/samples/Origins.mp3"
+import sample from "@/samples/Origins.ogg"
 
 const About: NextPage = () => {
   const review = Reviews[0]
@@ -20,7 +20,7 @@ const About: NextPage = () => {
       </p>
       <div className={styles.sample}>
         <audio className={styles.audio} preload="none" controls>
-          <source  src={sample} type="audio/mpeg" />
+          <source  src={sample} type="audio/ogg" />
         </audio>
         <h1>{'Exerpt from "Origins" by Eve Evans'}</h1>
       </div>
