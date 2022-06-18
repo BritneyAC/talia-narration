@@ -22,7 +22,7 @@ const About: NextPage = () => {
         <audio className={styles.audio} preload="none" controls>
           <source  src={sample} type="audio/mpeg" />
         </audio>
-        <h1>Exerpt from "Origins" by Eve Evans</h1>
+        <h1>{'Exerpt from "Origins" by Eve Evans'}</h1>
       </div>
 
       <div className={styles.review}>
