@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fill, calc(22vw - 2rem));
   grid-template-rows: 1fr 1fr;
   height: 100%;
+  padding: 1rem;
   gap: 2rem; 
   justify-content: space-between;
 }
