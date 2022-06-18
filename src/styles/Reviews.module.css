@@ -38,7 +38,7 @@
   grid-row-end: 3;
   align-self: start;
   height: 80%;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .review h2, .review .star {
@@ -49,12 +49,37 @@
   align-self: center;
 }
 
-.review h2 {
-  padding-left: 2rem;
-}
-
 .review .star {
   aspect-ratio: 1/1;
   width: 2rem;
   color: #fff566;
+}
+
+@media (max-width: 704px) {
+  .reviews {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 18vh);
+    overflow-y: scroll;
+  }
+  .review {
+    height: 19vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .review * {
+    padding: 0;
+    margin: 0;
+  }
+  .review p {
+    height: 50%;
+  }
+  .review h2 {
+    display: inline;
+  }
+  .review .star {
+    display: inline;
+  }
 }

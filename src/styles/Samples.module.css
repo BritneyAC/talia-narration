@@ -18,4 +18,17 @@
 .audio {
   align-self: center;
   justify-self: center;
+  border-radius: 1rem;
+}
+
+@media (max-width: 750px) {
+  .samples {
+    grid-template-rows: repeat(5, 14vh);
+    grid-template-columns: 1fr;
+    overflow: scroll;
+  }
+  .sample {
+    padding: 0.5rem 2rem;
+    font-size: .60rem;
+  }
 }

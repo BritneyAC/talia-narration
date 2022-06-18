@@ -23,6 +23,11 @@
   grid-row-end: -1;
   grid-column-start: 1;
   grid-column-end: 3;
+  width: 100%;
+  & audio{
+    width: 100%;
+    border-radius: 1rem;
+  }
 }
 
 .review{
@@ -49,4 +54,10 @@
   width: 2rem;
   color: hsl(56, 100, 70);
   display: inline;
+}
+
+@media(max-width: 704px) {
+  .about{
+    padding: 1rem 0;
+  }
 }

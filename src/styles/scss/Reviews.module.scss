@@ -34,7 +34,7 @@
     grid-row-end: 3;
     align-self: start;
     height: 80%;
-    overflow: auto;
+    overflow-y: scroll;
   }
   & h2, .star{
     grid-row-start: 3;
@@ -44,12 +44,42 @@
     align-self: center;
 
   }
-  & h2{
-    padding-left: 2rem;
-   } 
   .star{
     aspect-ratio: 1/1;
     width: 2rem;
     color: hsl(56, 100, 70);
   }
+}
+
+
+@media(max-width: 704px){
+  .reviews{
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 18vh);
+    overflow-y: scroll;
+  }
+
+  .review{
+    height: 19vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    & *{
+      padding: 0;
+      margin: 0;
+    }
+    & p{
+      height: 50%;
+    }
+    & h2{
+      display: inline;
+    }
+    .star{
+      display: inline;
+    }
+  }
+
+
 }

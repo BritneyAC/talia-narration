@@ -13,21 +13,42 @@ import talia from "@/images/talia.jpg"
 const Home: NextPage = () => {
   const [navIsShown, setNavIsShown] = useState(false)
   const [location, setLocation] = useState("/")
+  const [picStyle, setPicStyle] = useState(styles.picWrapperExpanded)
   const [expanded, setExpanded] = useState(true)
+  const [smallWidth, setSmallWidth] = useState(false)
   const toggleMenu = () => {
     setNavIsShown((prevShown: boolean) => !prevShown)
+    if(window.innerWidth < 705){
+      setSmallWidth(true)
+    } else{
+      setSmallWidth(false)
+    }
   }
   const switchPage = (newLocation: string) => {
     setLocation(newLocation)
   }
 
+
   useEffect(()=>{
-    if(location === "/"){
+    if(location === "/" && !navIsShown){
+      setPicStyle(styles.picWrapperExpanded)
+    } else if(location === "/" && navIsShown && !smallWidth){
+      setPicStyle(styles.picWrapperExpanded)
+    } else if(location === "/" && navIsShown && smallWidth){
+      setPicStyle(styles.picWrapperExpandedRaised)
+    } else if(location !== "/" && !navIsShown){
+      setPicStyle(styles.picWrapper)
+    } else if(location !== "/" && navIsShown && !smallWidth){
+      setPicStyle(styles.picWrapper)
+    } else if(location !== "/" && navIsShown && smallWidth){
+      setPicStyle(styles.picWrapperExpandedRaised)
+    }
+    if(picStyle === styles.picWrapperExpanded || picStyle === styles.picWrapperExpanded){
       setExpanded(true)
     } else{
       setExpanded(false)
     }
-  }, [location])
+  }, [location, navIsShown, smallWidth])
 
   return (
     <div className={styles.app}>
@@ -35,7 +56,7 @@ const Home: NextPage = () => {
         <title>Talia Narration</title>
         <meta name="description" content="Portfolio site for Talia Carver's narration work" />
       </Head>
-      <div className={expanded ? styles.picWrapperExpanded : styles.picWrapper}>
+      <div className={picStyle}>
         <Image className={styles.picOfTalia} height={expanded ? 320 : 80} width={expanded ? 240 : 60} sizes={"50vw"} layout="responsive" src={talia} alt="Talia"/>
       </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
@@ -49,10 +70,6 @@ const Home: NextPage = () => {
       </main>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  return {props: {}}
 }
 
 export default Home

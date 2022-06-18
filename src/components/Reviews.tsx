@@ -9,8 +9,10 @@ const Reviews: NextPage = () => {
   <div className={styles.review} key={review.id}>
     <h3>{review.name}</h3>
     <p>{review.review}</p>
-    <h2>{review.rating}</h2>
-    <FaStar className={styles.star}/>
+    <div className={styles.rating}>
+      <FaStar className={styles.star}/>
+      <h2>{review.rating}</h2>
+    </div>
   </div>)
 
   return(

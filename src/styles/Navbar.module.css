@@ -61,10 +61,14 @@
   color: inherit;
 }
 
-@media (max-width: 44rem) {
+@media (max-width: 704px) {
   .nav {
     height: 100%;
     width: 100%;
+    grid-template-columns: 4fr 3fr 1fr;
+  }
+  .title {
+    text-align: end;
   }
   .menu {
     flex-direction: column;
