@@ -26,6 +26,7 @@ const Home: NextPage = () => {
   }
   const switchPage = (newLocation: string) => {
     setLocation(newLocation)
+    setNavIsShown(false)
   }
 
 
