@@ -40,7 +40,7 @@
 }
 
 .picWrapperExpanded {
-  transform: translateX(8vw) translateY(16vh);
+  transform: translateX(8vw) translateY(calc(24vh - 2rem));
   width: clamp(12rem, 26vw, 24rem);
 }
 
@@ -59,7 +59,7 @@
     width: 100vw;
   }
   .picWrapperExpanded {
-    transform: translateX(2vw) translateY(24vh);
+    transform: translateX(2vw) translateY(calc(31vh - 2rem));
   }
   .main {
     overflow-y: auto;
