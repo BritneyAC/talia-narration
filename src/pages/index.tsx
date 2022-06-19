@@ -16,18 +16,31 @@ const Home: NextPage = () => {
   const [picStyle, setPicStyle] = useState(styles.picWrapperExpanded)
   const [expanded, setExpanded] = useState(true)
   const [smallWidth, setSmallWidth] = useState(false)
+  const [width, setWidth] = useState(0)
   const toggleMenu = () => {
     setNavIsShown((prevShown: boolean) => !prevShown)
+  }
+  const switchPage = (newLocation: string) => {
+    setLocation(newLocation)
     if(window.innerWidth <= 820){
+      setNavIsShown(false)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth)
+    })
+    setWidth(window.innerWidth)
+  },[])
+
+  useEffect(() => {
+    if(width <= 820){
       setSmallWidth(true)
     } else{
       setSmallWidth(false)
     }
-  }
-  const switchPage = (newLocation: string) => {
-    setLocation(newLocation)
-    setNavIsShown(false)
-  }
+  }, [width])
 
 
   useEffect(()=>{

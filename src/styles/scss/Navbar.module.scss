@@ -2,19 +2,30 @@
   z-index: 9998;
   display: grid;
   justify-content: center;
-  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-columns: 4fr 6fr 1fr;
   grid-template-rows: 1fr;
   height: 100%;
   align-items: center;
   background: hsl(325, 100%, 26%);
-  
   & *{
     margin: 0;
   }
 }
 
+.nav[data-menu = "closed"]{
+  grid-template-columns: 10fr 1fr;
+  & .title{
+    text-align: center;
+    transform: translateX(5%);
+    transition: transform .25s ease-in-out;
+  }
+  & .toggler{
+    grid-column-start: 2;
+  }
+}
+
 .title{
-  justify-self: end;
+  text-align: end;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;

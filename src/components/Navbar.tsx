@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   
 
   return(
-    <nav className={styles.nav}>
+    <nav className={styles.nav} data-menu={!props.navIsShown ? "closed" : ""}>
       <h1 className={styles.title}>Talia Carver</h1>
       <div className={styles.toggler} aria-controls="nav--menu" aria-expanded={props.navIsShown ? "true" : "false"} onClick={props.toggleMenu}>
         {props.navIsShown ? <GrClose>

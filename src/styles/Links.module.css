@@ -1,23 +1,26 @@
 .links {
   height: 90%;
-  margin: 2rem 2rem 0;
+  margin: 1rem 1rem 0;
   padding: 2rem;
-  background: #ffffb3;
-  color: black;
+  background: #85004d;
+  box-shadow: 0 0 0.5rem 0 black;
+  border-radius: 1rem;
 }
 
 .links * {
-  text-shadow: 1px 0 white, 0 1px white;
+  text-shadow: 1px 0 black, 0 1px black;
 }
 
 .links p {
   padding-left: 1rem;
+  margin-top: 0;
 }
 
 .links a {
   color: inherit;
   text-decoration: none;
   display: flex;
+  max-width: fit-content;
   align-items: center;
   padding-left: 1rem;
 }

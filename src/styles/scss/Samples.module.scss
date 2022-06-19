@@ -28,7 +28,7 @@
   .samples{
     grid-template-rows: repeat(5, 14vh);
     grid-template-columns: 1fr;
-    overflow: scroll;
+    overflow-y: auto;
   }
 
   .sample{

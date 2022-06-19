@@ -7,7 +7,7 @@ import sample from "@/samples/Witch-Water.ogg"
 const About: React.FC = () => {
   const review = Reviews[0]
   return(
-    <section className={styles.about}>
+    <div className={styles.about}>
       <p className={styles.text}>
         Passionate Narrorator with a wide vocal range and 
         effortful talent. With a wide variety of books already 
@@ -26,14 +26,14 @@ const About: React.FC = () => {
       </div>
 
       <div className={styles.review}>
-        <h4>{review.name}</h4>
+        <h2>{review.name}</h2>
         <p>{review.review}</p>
         <div className={styles.rating}>
           <FaStar className={styles.star}/>
           <h3>{review.rating}</h3>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
