@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Portfolio site for Talia Carver's narration work" />
       </Head>
       <div className={picStyle}>
-        <Image className={styles.picOfTalia} height={expanded ? 320 : 80} width={expanded ? 240 : 60} sizes={"25vw"} layout="responsive" src={talia} alt="Talia"/>
+        <Image className={styles.picOfTalia} height={expanded ? 320 : 80} width={expanded ? 240 : 60} sizes={"18vw"} layout="responsive" priority src={talia} alt="Talia"/>
       </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
         <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage}/>
