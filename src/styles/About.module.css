@@ -59,7 +59,7 @@
   display: inline;
 }
 
-@media (max-width: 704px) {
+@media (max-width: 820px) {
   .about {
     padding: 1rem 0;
   }

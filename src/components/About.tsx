@@ -1,10 +1,10 @@
-import { NextPage } from "next"
+import React from "react"
 import { FaStar } from "react-icons/fa"
 import styles from "@/styles/About.module.css"
 import Reviews from "@/ReviewList"
-import sample from "@/samples/Origins.ogg"
+import sample from "@/samples/Witch-Water.ogg"
 
-const About: NextPage = () => {
+const About: React.FC = () => {
   const review = Reviews[0]
   return(
     <section className={styles.about}>
@@ -22,7 +22,7 @@ const About: NextPage = () => {
         <audio className={styles.audio} preload="none" controls>
           <source  src={sample} type="audio/ogg" />
         </audio>
-        <h1>{'Exerpt from "Origins" by Eve Evans'}</h1>
+        <h1>{'Exerpt from "Witch Water" by Edward Lee'}</h1>
       </div>
 
       <div className={styles.review}>

@@ -1,6 +1,5 @@
-import { useState } from "react"
+import React from "react"
 import styles from "@/styles/Navbar.module.css";
-import { NextPage } from "next";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { GrClose } from "react-icons/gr"
 
@@ -10,7 +9,7 @@ interface NavbarProps {
   switchPage: (newLocation: string)=>void
 }
 
-const Navbar: NextPage<NavbarProps> = (props) => {
+const Navbar: React.FC<NavbarProps> = (props) => {
   const location = "/"
   const loc = location.slice(1,location.length)
   

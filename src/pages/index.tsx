@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   const [smallWidth, setSmallWidth] = useState(false)
   const toggleMenu = () => {
     setNavIsShown((prevShown: boolean) => !prevShown)
-    if(window.innerWidth < 705){
+    if(window.innerWidth <= 820){
       setSmallWidth(true)
     } else{
       setSmallWidth(false)

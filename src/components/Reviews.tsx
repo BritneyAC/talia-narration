@@ -1,9 +1,9 @@
 import reviewList from "../ReviewList"
 import {FaStar} from "react-icons/fa"
 import styles from "@/styles/Reviews.module.css"
-import { NextPage } from "next"
+import React from "react"
 
-const Reviews: NextPage = () => {
+const Reviews: React.FC = () => {
 
   const reviewElements = reviewList.map(review => 
   <div className={styles.review} key={review.id}>
