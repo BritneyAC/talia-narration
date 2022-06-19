@@ -16,7 +16,7 @@
 .main{  
   grid-row-start: 2;
   grid-row-end: -1;
-  padding: 2rem;
+  padding: 3rem 2rem;
   width: 100%;
 }
 
@@ -39,7 +39,7 @@
   height: 8vh;
   
   &Expanded{
-    transform: translateX(8vw) translateY(20vh);
+    transform: translateX(8vw) translateY(16vh);
     width: clamp(12rem, 26vw, 24rem);
   }
   &ExpandedRaised{
@@ -62,7 +62,7 @@
   }
 
   .picWrapperExpanded{
-    transform: translateX(2vw) translateY(25vh);
+    transform: translateX(2vw) translateY(24vh);
   }
   
   .main{
