@@ -43,7 +43,7 @@
     width: clamp(12rem, 26vw, 24rem);
   }
   &ExpandedRaised{
-    transform: translateX(2vw) translateY(2vh);
+    transform: translateX(2vw) translateY(1vh);
     width: clamp(12rem, 40vw, 16rem);
   }
 }
