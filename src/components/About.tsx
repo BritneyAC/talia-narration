@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return(
     <div className={styles.about}>
       <p className={styles.text}>
-        Passionate Narrorator with a wide vocal range and 
+        Passionate Narrator with a wide vocal range and 
         effortful talent. With a wide variety of books already 
         under my belt, and even recently a part in a local 
         theater production, I am always looking for more 
@@ -22,7 +22,7 @@ const About: React.FC = () => {
         <audio className={styles.audio} preload="none" controls>
           <source  src={sample} type="audio/ogg" />
         </audio>
-        <h1>{'Exerpt from "Witch Water" by Edward Lee'}</h1>
+        <h1>{'Excerpt from "Witch Water" by Edward Lee'}</h1>
       </div>
 
       <div className={styles.review}>
