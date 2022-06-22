@@ -102,6 +102,10 @@
     grid-template-columns: 4fr 3fr 1fr;
   }
 
+  .titles{
+    justify-content: center;
+  }
+
   .menu{
     flex-direction: column;
     height: 50vh;
