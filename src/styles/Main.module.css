@@ -39,7 +39,7 @@
 }
 .picWrapperExpanded {
   transform: translateX(8vw) translateY(calc(24vh - 2rem));
-  width: clamp(12rem, 26vw, 24rem);
+  width: clamp(10rem, 26vw, 24rem);
 }
 .picWrapperExpandedRaised {
   transform: translateX(2vw) translateY(1vh);
@@ -57,7 +57,7 @@
   }
 
   .picWrapperExpanded {
-    transform: translateX(2vw) translateY(calc(31vh - 2rem));
+    transform: translateX(2vw) translateY(calc(28vh - 2rem));
   }
 
   .main {

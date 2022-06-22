@@ -74,9 +74,10 @@
 .review h2 {
   grid-row-start: 3;
   grid-row-end: 4;
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: -1;
   text-align: end;
+  line-height: 1rem;
 }
 .review .rating {
   grid-row-start: 4;
@@ -95,6 +96,19 @@
 }
 
 @media (max-width: 820px) {
+  .about {
+    font-size: 0.9rem;
+  }
+
+  .sample h1 {
+    font-size: 1.5rem;
+  }
+
+  .review h1 {
+    font-size: 1.25rem;
+    line-height: 1rem;
+  }
+
   .about {
     padding: 1rem 0;
   }
