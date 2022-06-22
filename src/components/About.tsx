@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { FaStar } from "react-icons/fa"
 import styles from "@/styles/About.module.css"
 import Reviews from "@/ReviewList"
 import sample from "@/samples/Witch-Water.ogg"
 
 const About: React.FC = () => {
-  const review = Reviews[0]
+  const [review, setReview] = useState(Reviews[Math.floor(Math.random() * Reviews.length)])
   return(
     <div className={styles.about}>
       <p className={styles.text}>
@@ -19,15 +19,16 @@ const About: React.FC = () => {
         words as possible. 
       </p>
       <div className={styles.sample}>
-        <audio className={styles.audio} preload="none" controls>
+        <audio className={styles.audio} controls>
           <source  src={sample} type="audio/ogg" />
         </audio>
         <h1>{'Excerpt from "Witch Water" by Edward Lee'}</h1>
       </div>
 
       <div className={styles.review}>
-        <h2>{review.name}</h2>
+        <h1>{review.book}</h1>
         <p>{review.review}</p>
+        <h2>-{review.name}</h2>
         <div className={styles.rating}>
           <FaStar className={styles.star}/>
           <h3>{review.rating}</h3>

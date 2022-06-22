@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         <Image className={styles.picOfTalia} height={expanded ? 320 : 80} width={expanded ? 240 : 60} sizes={"18vw"} layout="responsive" priority src={talia} alt="Talia"/>
       </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
-        <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage}/>
+        <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage} location={location}/>
       </header>
       <main className={styles.main}>
         {location === "/" && <About/>}

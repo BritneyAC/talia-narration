@@ -8,15 +8,20 @@
 
 .sample {
   padding: 2rem;
-  background-color: #85004d;
+  background-color: hsl(325deg, 100%, 26%);
   border-radius: 1rem;
-  box-shadow: 0 0 0.15rem 0 white;
+  box-shadow: 0 0 0.15rem 0 hsla(0deg, 0%, 100%, 0.15);
   display: flex;
   flex-direction: column;
 }
-
 .sample * {
   margin: 0;
+}
+.sample:last-of-type {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  width: calc(50% - 0.5rem);
+  margin: 0 auto;
 }
 
 .audio {
@@ -31,8 +36,15 @@
     grid-template-columns: 1fr;
     overflow-y: auto;
   }
+
   .sample {
     padding: 0.5rem 2rem;
-    font-size: .60rem;
+    font-size: 0.6rem;
+  }
+  .sample:last-of-type {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: auto;
+    margin: 0;
   }
 }

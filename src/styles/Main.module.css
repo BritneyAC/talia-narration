@@ -1,6 +1,6 @@
 .app {
   color: white;
-  background: #141414;
+  background: hsl(0deg, 0%, 8%);
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -22,13 +22,12 @@
 
 .picWrapper, .picWrapperExpanded, .picWrapperExpandedRaised {
   position: absolute;
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   width: auto;
   height: auto;
   aspect-ratio: 3/4;
   display: block;
 }
-
 .picWrapper *, .picWrapperExpanded *, .picWrapperExpandedRaised * {
   height: 100%;
   width: 100%;
@@ -38,12 +37,10 @@
   transform: translateX(2vw) translateY(1vh);
   height: 8vh;
 }
-
 .picWrapperExpanded {
   transform: translateX(8vw) translateY(calc(24vh - 2rem));
   width: clamp(12rem, 26vw, 24rem);
 }
-
 .picWrapperExpandedRaised {
   transform: translateX(2vw) translateY(1vh);
   width: clamp(12rem, 40vw, 16rem);
@@ -58,9 +55,11 @@
     height: 100vh;
     width: 100vw;
   }
+
   .picWrapperExpanded {
     transform: translateX(2vw) translateY(calc(31vh - 2rem));
   }
+
   .main {
     overflow-y: auto;
     padding: 0 1rem 3rem;

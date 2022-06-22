@@ -1,7 +1,7 @@
 .reviews{
   display: grid;
-  grid-template-columns: repeat(auto-fill, calc(22vw - 1rem));
-  grid-template-rows: repeat(20, 30vh);
+  grid-template-columns: repeat(3, clamp(15rem, calc(30vw - 2rem), 45vw));
+  grid-template-rows: repeat(20, 36vh);
   height: auto;
   overflow-y: auto;
   padding: 1rem;
@@ -10,19 +10,21 @@
 }
 .review{
   display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   background-color: hsl(325, 100%, 26%);
-  box-shadow: 0 0 .15rem 0 hsla(0, 0, 0, 25%);
+  box-shadow: 0 0 .15rem 0 hsla(0, 0%, 0%, 25%);
   border-radius: 1rem;
   padding: 0 1rem;
 
-  & h3, & h2{
+  & h3, & h2, & h1{
     margin: 0;
   }
-  & h3{
-    padding-top: 1rem;
+  & h1{
+    font-size: clamp(.5rem, 1.5rem, 3rem);
+    line-height: clamp(1rem, 2rem, 3rem);
+    padding-top: .25rem;
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 1;
@@ -37,8 +39,16 @@
     height: 80%;
     overflow-y: auto;
   }
-  & h2, .star{
+  & h3{
+    line-height: 1rem;
+    grid-column-start: 2;
+    grid-column-end: -1;
     grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+  }
+  & .rating{
+    grid-row-start: 4;
     grid-row-end: -1;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -47,12 +57,13 @@
   .star{
     aspect-ratio: 1/1;
     width: 2rem;
-    color: hsl(56, 100, 70);
+    color: hsl(56, 100%, 70%);
   }
 }
 
 .rating{
   display: flex;
+  align-items: center;
 }
 
 
@@ -60,25 +71,14 @@
   .reviews{
     height: fit-content;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, 18vh);
+    grid-template-rows: repeat(auto-fit, 32vh);
     overflow-y: auto;
   }
 
   .review{
-    height: 18vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    & *{
-      padding: 0;
-      margin: 0;
-    }
+    height: 32vh;
     & p{
-      height: 50%;
-    }
-    & h3{
-      padding-top: .25rem;
+      height: 100%;
     }
     & h2{
       display: inline;

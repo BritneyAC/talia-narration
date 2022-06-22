@@ -9,7 +9,7 @@ const Samples: React.FC = () => {
 
   const samplesElements = arrayOfSamples.map((sample, index) => 
     <div key={index} className={styles.sample}>
-      <audio className={styles.audio} preload="none" controls>
+      <audio className={styles.audio} controls>
         <source  src={sample.src} type="audio/ogg" />
       </audio>
       <h1>{sample.name}</h1>

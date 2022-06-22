@@ -7,8 +7,9 @@ const Reviews: React.FC = () => {
 
   const reviewElements = reviewList.map(review => 
   <div className={styles.review} key={review.id}>
-    <h3>{review.name}</h3>
+    <h1>{review.book}</h1>
     <p>{review.review}</p>
+    <h3>-{review.name}</h3>
     <div className={styles.rating}>
       <FaStar className={styles.star}/>
       <h2>{review.rating}</h2>

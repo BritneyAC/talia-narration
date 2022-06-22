@@ -14,9 +14,9 @@
 
 .nav[data-menu = "closed"]{
   grid-template-columns: 10fr 1fr;
-  & .title{
-    text-align: center;
-    transform: translateX(5%);
+  & .titles{
+    justify-self: center;
+    transform: translateX(calc(5% + 1rem));
     transition: transform .25s ease-in-out;
   }
   & .toggler{
@@ -24,15 +24,31 @@
   }
 }
 
-.title{
-  text-align: end;
+
+
+.titles{
+  justify-self: flex-end;
+  text-align: center;
+  width: fit-content;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: -1;
+  display: flex;
+  flex-direction: column;
+  & * {
+    margin: 0;
+    text-shadow: 1px 0 black, 0 1px black;
+  }
+}
+
+.title{
   font-size: 2.5rem;
-  margin: 0;
-  text-shadow: 1px 0 black, 0 1px black;
+}
+
+.location{
+  text-transform: capitalize;
+  font-size: 1.5rem;
 }
 
 .toggler{
@@ -55,7 +71,7 @@
 }
 
 
-.menu, .location{
+.menu{
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -77,10 +93,6 @@
     height: 100%;
     width: 100%;
     grid-template-columns: 4fr 3fr 1fr;
-  }
-
-  .title{
-    text-align: end;
   }
 
   .menu{

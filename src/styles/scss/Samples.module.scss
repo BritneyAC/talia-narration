@@ -10,11 +10,17 @@
   padding: 2rem;
   background-color: hsl(325, 100%, 26%);
   border-radius: 1rem;
-  box-shadow: 0 0 .15rem 0 hsla(0, 0, 100%, 15%);
+  box-shadow: 0 0 .15rem 0 hsla(0, 0%, 100%, 15%);
   display: flex;
   flex-direction: column;
   & * {
     margin: 0;
+  }
+  &:last-of-type{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    width: calc(50% - .5rem);
+    margin: 0 auto;
   }
 }
 
@@ -34,5 +40,11 @@
   .sample{
     padding: 0.5rem 2rem;
     font-size: .60rem;
+    &:last-of-type{
+      grid-column-start: 1;
+      grid-column-end: -1;
+      width: auto;
+      margin: 0;
+    }
   }
 }

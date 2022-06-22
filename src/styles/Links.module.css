@@ -2,20 +2,17 @@
   height: 90%;
   margin: 1rem 1rem 0;
   padding: 2rem;
-  background: #85004d;
-  box-shadow: 0 0 0.5rem 0 black;
+  background: hsl(325deg, 100%, 26%);
+  box-shadow: 0 0 0.5rem 0 hsl(0deg, 0%, 0%);
   border-radius: 1rem;
 }
-
 .links * {
   text-shadow: 1px 0 black, 0 1px black;
 }
-
 .links p {
   padding-left: 1rem;
   margin-top: 0;
 }
-
 .links a {
   color: inherit;
   text-decoration: none;
@@ -24,12 +21,10 @@
   align-items: center;
   padding-left: 1rem;
 }
-
 .links a * {
   aspect-ratio: 1;
   height: 1rem;
 }
-
 .links h2 {
   margin-bottom: 0;
 }

@@ -6,36 +6,47 @@
   grid-template-rows: 1fr;
   height: 100%;
   align-items: center;
-  background: #85004d;
+  background: hsl(325deg, 100%, 26%);
 }
-
 .nav * {
   margin: 0;
 }
 
-.nav[data-menu="closed"] {
+.nav[data-menu=closed] {
   grid-template-columns: 10fr 1fr;
 }
-
-.nav[data-menu="closed"] .title {
-  text-align: center;
-  transform: translateX(5%);
-  transition: transform .25s ease-in-out;
+.nav[data-menu=closed] .titles {
+  justify-self: center;
+  transform: translateX(calc(5% + 1rem));
+  transition: transform 0.25s ease-in-out;
 }
-
-.nav[data-menu="closed"] .toggler {
+.nav[data-menu=closed] .toggler {
   grid-column-start: 2;
 }
 
-.title {
-  text-align: end;
+.titles {
+  justify-self: flex-end;
+  text-align: center;
+  width: fit-content;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: -1;
-  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.titles * {
   margin: 0;
   text-shadow: 1px 0 black, 0 1px black;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.location {
+  text-transform: capitalize;
+  font-size: 1.5rem;
 }
 
 .toggler {
@@ -51,14 +62,13 @@
   aspect-ratio: 1;
   cursor: pointer;
 }
-
 .toggler * {
   stroke: white;
   width: 100%;
   height: 100%;
 }
 
-.menu, .location {
+.menu {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -81,9 +91,7 @@
     width: 100%;
     grid-template-columns: 4fr 3fr 1fr;
   }
-  .title {
-    text-align: end;
-  }
+
   .menu {
     flex-direction: column;
     height: 50vh;
