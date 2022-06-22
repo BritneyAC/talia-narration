@@ -1,11 +1,16 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { FaStar } from "react-icons/fa"
 import styles from "@/styles/About.module.css"
 import Reviews from "@/ReviewList"
 import sample from "@/samples/Witch-Water.ogg"
 
 const About: React.FC = () => {
-  const [review, setReview] = useState(Reviews[Math.floor(Math.random() * Reviews.length)])
+  const [review, setReview] = useState(Reviews[0])
+  
+  useEffect(()=>{
+    setReview(Reviews[Math.floor(Math.random() * Reviews.length)])
+  },[])
+
   return(
     <div className={styles.about}>
       <p className={styles.text}>
