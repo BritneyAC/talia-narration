@@ -40,9 +40,9 @@
 }
 
 .review {
-  height: clamp(4rem, 30vh, 100%);
-  width: clamp(8rem, 100%, 60ch);
-  align-self: flex-start;
+  height: fit-content;
+  width: clamp(8rem, 100%, 70ch);
+  align-self: center;
   justify-self: center;
   text-shadow: 1px 0 black, 0 1px black;
   grid-row-start: 2;
@@ -57,19 +57,20 @@
 .review * {
   overflow: visible;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.5rem;
 }
 .review h1 {
   font-size: clamp(1.15rem, 4vw, 6vh);
 }
 .review p {
   display: block;
-  font-size: clamp(0.85rem, 1vw, 4vh);
-  height: clamp(2rem, 11vh, 90%);
+  font-size: clamp(0.85rem, 1.5vw, 1.75vh);
+  height: clamp(3rem, 30vw, 100%);
   overflow-y: auto;
 }
 .review h2 {
   align-self: flex-end;
+  font-size: clamp(1rem, 2vw, 5vh);
 }
 .review .rating {
   display: flex;
@@ -79,8 +80,7 @@
 }
 
 .star {
-  aspect-ratio: 1/1;
   width: 2rem;
+  height: 2rem;
   color: hsl(56deg, 100%, 70%);
-  display: inline;
 }
