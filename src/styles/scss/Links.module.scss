@@ -1,24 +1,37 @@
 .links{
   height: 100%;
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem 10rem;
   background: #85004d;;
   box-shadow: 0 0 .5rem 0 hsl(0, 0%, 0%);
   border-radius: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   border: 2px solid white;
+  & .link{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    &:first-of-type {
+      align-self: flex-start;
+    }
+    &:last-of-type {
+      align-self: flex-end;
+    }
+  }
 
   & p{
     margin: 0;
-    font-size: 2.25rem;
+    font-size: clamp(1.5rem, 5vw, 4vh);
   }
   & a{ 
     text-align: inherit;
     color: inherit;
     text-decoration: none;
-    font-size: 2.25rem;
+    font-size: clamp(1.5rem, 5vw, 4vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +47,7 @@
   & h2{
     margin: 0;
     padding: 1rem 0;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 10vw, 6vh);
     &:first-of-type{
       padding: 0 0 1rem;
     }
