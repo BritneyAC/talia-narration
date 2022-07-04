@@ -8,6 +8,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  border: 1px solid white;
 }
 .links p {
   margin: 0;
