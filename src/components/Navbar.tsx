@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "@/styles/Navbar.module.css";
+import styles from "@/styles/css/Navbar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi"
 import { GrClose } from "react-icons/gr"
 

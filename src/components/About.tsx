@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { FaStar } from "react-icons/fa"
-import styles from "@/styles/About.module.css"
+import styles from "@/styles/css/About.module.css"
 import Reviews from "@/ReviewList"
 import sample from "@/samples/Witch-Water.ogg"
 

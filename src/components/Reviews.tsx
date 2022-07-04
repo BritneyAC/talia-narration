@@ -1,6 +1,6 @@
 import reviewList from "../ReviewList"
 import {FaStar} from "react-icons/fa"
-import styles from "@/styles/Reviews.module.css"
+import styles from "@/styles/css/Reviews.module.css"
 import React from "react"
 
 const Reviews: React.FC = () => {

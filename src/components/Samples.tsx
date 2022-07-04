@@ -1,4 +1,4 @@
-import styles from "@/styles/Samples.module.css"
+import styles from "@/styles/css/Samples.module.css"
 import { NextPage } from "next"
 import arrayOfSamples from "@/SampleList"
 import React from "react"

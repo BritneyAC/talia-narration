@@ -1,23 +1,29 @@
 import React from "react"
-import styles from "@/styles/Links.module.css"
+import styles from "@/styles/css/Links.module.css"
 import { GoLinkExternal } from 'react-icons/go'
 
 const Links: React.FC = () => {
   return(
     <div className={styles.links}>
-      <h2>Email: </h2> 
-      <p>
-        talia@carvervo.com
-      </p>
-      <h2>Catalogue of work:</h2> 
-      <a 
-        href="https://www.audible.com/search?searchNarrator=Talia+Carver">
-          Audible<GoLinkExternal />
-      </a>
-      <h2>Twitter:</h2> 
-      <a href="https://twitter.com/theTaliaCarver">
-        @theTaliaCarver {<GoLinkExternal />}
-      </a>
+      <div className={styles.link}>
+        <h2>Email: </h2> 
+        <p>
+          talia@carvervo.com
+        </p>
+      </div>
+      <div className={styles.link}>
+        <h2>Catalogue of work:</h2> 
+        <a 
+          href="https://www.audible.com/search?searchNarrator=Talia+Carver">
+            Audible<GoLinkExternal />
+        </a>
+      </div>
+      <div className={styles.link}>
+        <h2>Twitter:</h2> 
+        <a href="https://twitter.com/theTaliaCarver">
+          @theTaliaCarver {<GoLinkExternal />}
+        </a>
+      </div>
     </div>
   )
 }

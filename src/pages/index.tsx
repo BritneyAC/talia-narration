@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '@/styles/Main.module.css';
+import styles from '@/styles/css/Main.module.css';
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Samples from '@/components/Samples';
@@ -11,7 +11,7 @@ import Links from '@/components/Links';
 import talia from "@/images/talia.jpg"
 
 const Home: NextPage = () => {
-  const [navIsShown, setNavIsShown] = useState(false)
+  const [navIsShown, setNavIsShown] = useState(true)
   const [location, setLocation] = useState("/")
   const [picStyle, setPicStyle] = useState(styles.picWrapperExpanded)
   const [expanded, setExpanded] = useState(true)
@@ -32,6 +32,9 @@ const Home: NextPage = () => {
       setWidth(window.innerWidth)
     })
     setWidth(window.innerWidth)
+    if(window.innerWidth <= 820){
+      setNavIsShown(false)
+    }
   },[])
 
   useEffect(() => {
@@ -69,9 +72,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Talia Narration</title>
         <meta name="description" content="Portfolio site for Talia Carver's narration work" />
+        <link rel="icon" href="tc.ico"/>
       </Head>
       <div className={picStyle}>
-        <Image className={styles.picOfTalia} height={expanded ? 320 : 80} width={expanded ? 240 : 60} sizes={"18vw"} layout="responsive" priority src={talia} alt="Talia"/>
+        <Image className={styles.picOfTalia} height={1040} width={780} sizes={"50vw"} layout="responsive" priority src={talia} alt="Talia"/>
       </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
         <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage} location={location}/>
