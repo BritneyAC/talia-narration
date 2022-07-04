@@ -24,7 +24,7 @@ const About: React.FC = () => {
         words as possible. 
       </p>
       <div className={styles.sample}>
-        <audio className={styles.audio} controls>
+        <audio className={styles.audio} controls preload="metadata">
           <source  src={sample} type="audio/ogg" />
         </audio>
         <h1>{'Excerpt from "Witch Water" by Edward Lee'}</h1>
