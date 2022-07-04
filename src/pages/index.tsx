@@ -11,7 +11,7 @@ import Links from '@/components/Links';
 import talia from "@/images/talia.jpg"
 
 const Home: NextPage = () => {
-  const [navIsShown, setNavIsShown] = useState(true)
+  const [navIsShown, setNavIsShown] = useState(false)
   const [location, setLocation] = useState("/")
   const [picStyle, setPicStyle] = useState(styles.picWrapperExpanded)
   const [expanded, setExpanded] = useState(true)
@@ -32,8 +32,8 @@ const Home: NextPage = () => {
       setWidth(window.innerWidth)
     })
     setWidth(window.innerWidth)
-    if(window.innerWidth <= 820){
-      setNavIsShown(false)
+    if(window.innerWidth > 820){
+      setNavIsShown(true)
     }
   },[])
 

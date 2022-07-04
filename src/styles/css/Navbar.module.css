@@ -18,7 +18,7 @@
 }
 .nav[data-menu=closed] .titles {
   justify-self: center;
-  transform: translateX(calc(5% + 1rem));
+  transform: translateX(calc(50% - 3rem));
   transition: transform 0.25s ease-in-out;
 }
 .nav[data-menu=closed] .toggler {
@@ -37,6 +37,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  transform: translateX(calc(-5% - 1rem));
+  transition: transform 0.25s ease-in-out;
 }
 .titles * {
   line-height: 2rem;
@@ -97,7 +99,7 @@
     width: 100%;
     grid-template-columns: 4fr 3fr 1fr;
   }
-  .nav .nav[data-menu=open] {
+  .nav[data-menu=open] {
     border-bottom: none;
   }
 

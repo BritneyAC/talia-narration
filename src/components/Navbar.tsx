@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   
 
   return(
-    <nav className={styles.nav} data-menu={!props.navIsShown ? "closed" : ""}>
+    <nav className={styles.nav} data-menu={!props.navIsShown ? "closed" : "open"}>
       <div className={styles.titles}>
         <h1 className={styles.title}>Talia Carver</h1>
         <h6 className={styles.location}>{!!location ? location : "about"}</h6>
