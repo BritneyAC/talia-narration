@@ -16,7 +16,7 @@
   & * {
     margin: 0;
   }
-  &:last-of-type{
+  &:last-of-type:nth-of-type(odd){
     grid-column-start: 1;
     grid-column-end: -1;
     width: calc(50% - .5rem);

@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/future/image';
+import dynamic from "next/dynamic";
 
 import styles from '@/styles/css/Main.module.css';
-import talia from "@/images/talia.jpg"
 
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
-import Samples from '@/components/Samples';
-import Reviews from '@/components/Reviews';
 import Links from '@/components/Links';
+
+const Samples = dynamic(() => import('@/components/Samples'));
+const Reviews  = dynamic(() => import('@/components/Reviews'));
 
 const Home: NextPage = () => {
   const [navIsShown, setNavIsShown] = useState(false)
   const [location, setLocation] = useState("/")
   const [picStyle, setPicStyle] = useState(styles.picWrapperExpanded)
-  const [expanded, setExpanded] = useState(true)
   const [smallWidth, setSmallWidth] = useState(false)
   const [width, setWidth] = useState(0)
   const toggleMenu = () => {
@@ -62,11 +62,6 @@ const Home: NextPage = () => {
     } else if(location !== "/" && navIsShown && smallWidth){
       setPicStyle(styles.picWrapperExpandedRaised)
     }
-    if(picStyle === styles.picWrapperExpanded || picStyle === styles.picWrapperExpanded){
-      setExpanded(true)
-    } else{
-      setExpanded(false)
-    }
   }, [location, navIsShown, smallWidth])
 
   return (
@@ -77,7 +72,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="tc.ico"/>
       </Head>
       <div className={picStyle}>
-        <Image className={styles.picOfTalia} height={1040} width={780} sizes={"25vh"} layout="responsive" priority src={talia} alt="Talia"/>
+        <Image className={styles.picOfTalia} height={1040} width={780} sizes={"40vw"} priority src="/images/talia-min.jpg" alt="Talia"/>
       </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
         <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage} location={location}/>
