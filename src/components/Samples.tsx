@@ -2,6 +2,7 @@ import styles from "@/styles/css/Samples.module.css"
 import { NextPage } from "next"
 import arrayOfSamples from "@/SampleList"
 import React from "react"
+import AudioPlayer from "@/components/AudioPlayer"
 
 
 const Samples: React.FC = () => {
@@ -9,9 +10,7 @@ const Samples: React.FC = () => {
 
   const samplesElements = arrayOfSamples.map((sample, index) => 
     <div key={index} className={styles.sample}>
-      <audio className={styles.audio} controls preload="metadata">
-        <source  src={sample.src} type="audio/ogg" />
-      </audio>
+      <AudioPlayer src={sample.src}/>
       <h1>{sample.name}</h1>
       <h3>By - {sample.author}</h3>
       <p>{sample.genre}</p>

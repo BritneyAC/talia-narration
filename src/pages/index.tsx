@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+
 import styles from '@/styles/css/Main.module.css';
+import talia from "@/images/talia.jpg"
+
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Samples from '@/components/Samples';
 import Reviews from '@/components/Reviews';
 import Links from '@/components/Links';
-import talia from "@/images/talia.jpg"
 
 const Home: NextPage = () => {
   const [navIsShown, setNavIsShown] = useState(false)
@@ -75,7 +77,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="tc.ico"/>
       </Head>
       <div className={picStyle}>
-        <Image className={styles.picOfTalia} height={1040} width={780} sizes={"50vw"} layout="responsive" priority src={talia} alt="Talia"/>
+        <Image className={styles.picOfTalia} height={1040} width={780} sizes={"25vh"} layout="responsive" priority src={talia} alt="Talia"/>
       </div>
       <header className={navIsShown ? styles.headerExpanded : styles.header}>
         <Navbar navIsShown={navIsShown} toggleMenu={toggleMenu} switchPage={switchPage} location={location}/>

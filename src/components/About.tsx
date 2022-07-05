@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { FaStar } from "react-icons/fa"
 import styles from "@/styles/css/About.module.css"
 import Reviews from "@/ReviewList"
-import sample from "@/samples/Witch-Water.ogg"
+import AudioPlayer from "./AudioPlayer"
 
 const About: React.FC = () => {
   const [review, setReview] = useState(Reviews[0])
@@ -24,9 +24,7 @@ const About: React.FC = () => {
         words as possible. 
       </p>
       <div className={styles.sample}>
-        <audio className={styles.audio} controls preload="metadata">
-          <source  src={sample} type="audio/ogg" />
-        </audio>
+        <AudioPlayer src={"https://samples.audible.com/bk/acx0/307640/bk_acx0_307640_sample.mp3"} />
         <h1>{'Excerpt from "Witch Water" by Edward Lee'}</h1>
       </div>
 
