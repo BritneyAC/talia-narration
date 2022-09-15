@@ -8,7 +8,9 @@ const Samples: React.FC = () => {
 
   const samplesElements = arrayOfSamples.map((sample, index) => 
     <div key={index} className={styles.sample}>
-      <img src={sample.cover} alt={sample.name} className={styles.cover}/>
+      <a href={sample.link}>
+        <img src={sample.cover} alt={sample.name} className={styles.cover}/>
+      </a>
       <div className={styles.right}>
         <audio src={sample.src} controls className={styles.audio}/>
         <div className={styles.info}>

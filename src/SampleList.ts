@@ -1,6 +1,6 @@
 const arrayOfSamples = [
   {src: "https://samples.audible.com/bk/acx0/322524/bk_acx0_322524_sample.mp3",
-  name: '"Drunks"', 
+  name: '"DRUNKS"', 
   author: "Ken Fry", 
   genre: "Drama", 
   voiceDesc: "Male", 
@@ -9,7 +9,7 @@ const arrayOfSamples = [
   },
   
   {src: "https://samples.audible.com/bk/acx0/307640/bk_acx0_307640_sample.mp3", 
-  name:' "Witch Water"', 
+  name:' "WITCH-WATER"', 
   author: "Edward Lee", 
   genre: "Horror", 
   voiceDesc: "Male", 
@@ -17,7 +17,7 @@ const arrayOfSamples = [
   cover: "https://m.media-amazon.com/images/I/51BwHerS5TL._SL500_.jpg"},
 
   {src: "https://samples.audible.com/bk/acx0/312244/bk_acx0_312244_sample.mp3",
-  name: '"Bel Breaker"', 
+  name: '"BEL BREAKER"', 
   author: "Chris Cardenas", 
   genre: "Sci-fi", 
   voiceDesc: "Female", 
@@ -25,7 +25,7 @@ const arrayOfSamples = [
   cover: "https://m.media-amazon.com/images/I/51NfGjiaf7L._SL500_.jpg"},
 
   {src: "https://samples.audible.com/bk/acx0/320564/bk_acx0_320564_sample.mp3",
-  name: '"Uncrowned"', 
+  name: '"UNCROWNED"', 
   author: "Sirius", 
   genre: "Fantasy", 
   voiceDesc: "Female", 
@@ -33,7 +33,7 @@ const arrayOfSamples = [
   cover: "https://m.media-amazon.com/images/I/51QH8C96zOL._SL500_.jpg"},
 
   {src: "https://samples.audible.com/bk/acx0/280136/bk_acx0_280136_sample.mp3", 
-  name: '"The Color Thief"', 
+  name: '"THE COLOR THIEF"', 
   author: "Emily Poirier", 
   genre: "Fantasy", 
   voiceDesc: "Female", 
@@ -41,7 +41,7 @@ const arrayOfSamples = [
   cover: "https://m.media-amazon.com/images/I/51aersWVx5L._SL500_.jpg"},
 
   {src: "https://samples.audible.com/bk/acx0/293060/bk_acx0_293060_sample.mp3", 
-  name:' "Starflight"', 
+  name:' "STARFLIGHT"', 
   author: "Three Ravens Publishing", 
   genre: "Sci-fi Anthology", 
   voiceDesc: "Male", 
