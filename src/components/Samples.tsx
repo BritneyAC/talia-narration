@@ -14,8 +14,8 @@ const Samples: React.FC = () => {
         <div className={styles.info}>
           <h1><a href={sample.link}>{sample.name}</a></h1>
           <h3>By - {sample.author}</h3>
-          <p>{sample.genre}</p>
-          <p>{sample.voiceDesc}</p>
+          <p>Genre: {sample.genre}</p>
+          <p>Vocal Style: {sample.voiceDesc}</p>
         </div>
       </div>
     </div>)
