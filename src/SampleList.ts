@@ -42,7 +42,7 @@ const arrayOfSamples = [
 
   {src: "https://samples.audible.com/bk/acx0/293060/bk_acx0_293060_sample.mp3", 
   name:' "Starflight"', 
-  author: "Tree Ravens Publishing", 
+  author: "Three Ravens Publishing", 
   genre: "Sci-fi Anthology", 
   voiceDesc: "Male", 
   link: "https://www.audible.com/pd/Starflight-Audiobook/B09PZH8RHK?qid=1663209061&sr=1-8&ref=a_search_c3_lProduct_1_8&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=056HH9XQD3SJW85VCVTN",
