@@ -8,12 +8,16 @@ const Samples: React.FC = () => {
 
   const samplesElements = arrayOfSamples.map((sample, index) => 
     <div key={index} className={styles.sample}>
-      <audio src={sample.src} controls className={styles.audio}/>
-      <h1>{sample.name}</h1>
-      <h3>By - {sample.author}</h3>
-      <p>{sample.genre}</p>
-      <p>{sample.voiceDesc}</p>
-      <p>{sample.contentDesc}</p>
+      <img src={sample.cover} alt={sample.name} className={styles.cover}/>
+      <div className={styles.right}>
+        <audio src={sample.src} controls className={styles.audio}/>
+        <div className={styles.info}>
+          <h1><a href={sample.link}>{sample.name}</a></h1>
+          <h3>By - {sample.author}</h3>
+          <p>{sample.genre}</p>
+          <p>{sample.voiceDesc}</p>
+        </div>
+      </div>
     </div>)
 
   return(
