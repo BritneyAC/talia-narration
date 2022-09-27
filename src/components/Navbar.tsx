@@ -32,7 +32,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         <li onClick={() => {props.switchPage("/")}}>About Me</li>
         <li onClick={() => {props.switchPage("/samples")}}>Samples</li>
         <li onClick={() => {props.switchPage("/reviews")}}>Reviews</li>
-        <li onClick={() => {props.switchPage("/links")}}>Links</li>
       </ul>}
     </nav>
   )

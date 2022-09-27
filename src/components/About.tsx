@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { FaStar } from "react-icons/fa"
 import styles from "@/styles/css/About.module.css"
 import Reviews from "@/ReviewList"
+import Links from "@/components/Links"
 
 const About: React.FC = () => {
   const [review, setReview] = useState(Reviews[0])
@@ -26,16 +27,7 @@ const About: React.FC = () => {
         <audio src={"https://samples.audible.com/bk/acx0/307640/bk_acx0_307640_sample.mp3"} controls className={styles.audio}/>
         <h1>{'Excerpt from "Witch Water" by Edward Lee'}</h1>
       </div>
-
-      <div className={styles.review}>
-        <h1>{review.book}</h1>
-        <p>{review.review}</p>
-        <h2>-{review.name}</h2>
-        <div className={styles.rating}>
-          <FaStar className={styles.star}/>
-          <h3>{review.rating}</h3>
-        </div>
-      </div>
+      <Links/>
     </div>
   )
 }

@@ -16,7 +16,7 @@
   grid-column-end: -1;
   width: clamp(20ch, 40vw, 60ch);
   overflow: visible;
-  font-size: clamp(0.85rem, 2vw, 4vh);
+  font-size: clamp(1rem, 2vw, 4vh);
 }
 
 .sample {
