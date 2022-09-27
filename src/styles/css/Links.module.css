@@ -28,7 +28,7 @@
 .links .link:last-of-type {
   align-self: flex-end;
 }
-.links .link > * {
+.links .link * {
   margin: 0;
   line-height: 1.1;
   overflow: visible;
@@ -42,12 +42,13 @@
   align-items: center;
   justify-content: center;
 }
-.links a *, .links p * {
+.links a svg, .links p svg {
+  margin-top: 0.15rem;
   aspect-ratio: 1;
   height: clamp(1rem, 2vw, 2vh);
 }
-.links a svg, .links p svg {
-  margin-top: 0.15rem;
+.links a {
+  flex-direction: column;
 }
 .links h2 {
   font-size: clamp(1rem, 5vw, 2.6vh);

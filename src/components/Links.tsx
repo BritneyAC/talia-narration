@@ -12,16 +12,16 @@ const Links: React.FC = () => {
         </p>
       </div>
       <div className={styles.link}>
-        <h2>Catalogue of work:</h2> 
         <a 
           href="https://www.audible.com/search?searchNarrator=Talia+Carver">
-            Audible<GoLinkExternal />
+            <h2>Catalogue of work:</h2> 
+            <p>Audible<GoLinkExternal /></p>
         </a>
       </div>
       <div className={styles.link}>
-        <h2>Twitter:</h2> 
         <a href="https://twitter.com/theTaliaCarver">
-          @theTaliaCarver {<GoLinkExternal />}
+          <h2>Twitter:</h2> 
+          <p>@theTaliaCarver {<GoLinkExternal />}</p>
         </a>
       </div>
     </div>
